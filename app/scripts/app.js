@@ -32,14 +32,20 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
 
   $stateProvider.state('collection', {
     url: '/collection',
-    controller: 'Collection.controller',
-    templateUrl: '/templates/collection.html'
+    views: {
+      '': {templateUrl: '/templates/collection.html',
+            controller: 'Collection.controller'},
+      'player-bar@': {templateUrl: '/templates/player_bar.html'}
+    }
   });
 
   $stateProvider.state('album', {
     url: '/album',
-    templateUrl: '/templates/album.html',
-    controller: 'Album.controller'
+    views: {
+      '': {templateUrl: '/templates/album.html',
+            controller: 'Album.controller'},
+      'player-bar@': {templateUrl: '/templates/player_bar.html'}
+    }
   });
 
 }]);
@@ -50,6 +56,12 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
 
     $scope.subTextClicked = function(){
       $scope.subText += '!';
+    };
+
+    $scope.titleText = "Bloc Jams";
+
+    $scope.titleTextClicked = function() {
+      $scope.titleText += ' Hell Yeah!';
     };
 
        $scope.albumURLs = [
