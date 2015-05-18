@@ -35,7 +35,7 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
     views: {
       '': {templateUrl: '/templates/collection.html',
             controller: 'Collection.controller'},
-      'player-bar@': {templateUrl: '/templates/player_bar.html'}
+      'player-bar': {templateUrl: '/templates/player_bar.html'}
     }
   });
 
@@ -44,7 +44,7 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
     views: {
       '': {templateUrl: '/templates/album.html',
             controller: 'Album.controller'},
-      'player-bar@': {templateUrl: '/templates/player_bar.html'}
+      'player-bar': {templateUrl: '/templates/player_bar.html'}
     }
   });
 
