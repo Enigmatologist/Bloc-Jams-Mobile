@@ -11,7 +11,7 @@
   .selling-points .point {
     width: 32%;
     float: left;
-    padding: 0 0.5%; }
+    padding: 0 20px; }
     .selling-points .point h5 {
       font-size: 24px;
       font-weight: bold;
@@ -19,7 +19,7 @@
       text-align: center;
       height: 85px; }
     .selling-points .point p {
-      font-size: 14px; }
+      font-size: 18px; }
 
 .album-header-container {
   margin-top: 55px;
@@ -125,7 +125,7 @@ td.song-number {
   left: 0;
   right: 0;
   height: 150px;
-  background: rgba(255, 255, 255, 0.3);
+  background: #7b46a3;
   z-index: 100; }
   .player-bar a, .player-bar a:hover {
     color: white;
@@ -305,6 +305,71 @@ td.song-number {
 .no-right-gutter {
   padding-right: 0px; }
 
+@media screen and (max-width: 768px) {
+  /* Landing Page and Global Styles */
+  /* Landing Page Template Styles */
+  /* Collection View */
+  /* Player Bar View */
+  .player-header-nav .navbar-nav li {
+    text-align: center; }
+  .hero-content {
+    background: #2f1d57;
+    padding: 100px 0; }
+    .hero-content h1, .hero-content h3 {
+      text-align: center;
+      color: white; }
+  .selling-points {
+    padding: 0 20px; }
+    .selling-points .point {
+      padding: 1.6em 0.75em;
+      width: 100%;
+      position: relative; }
+      .selling-points .point h5 {
+        height: 2.25em;
+        margin-bottom: 2px;
+        font-size: 1.7em; }
+      .selling-points .point p {
+        text-align: center;
+        font-size: 1.2em; }
+  .landing-album-list {
+    /* Example class added to style the album covers for mobile */ }
+    .landing-album-list .album-cover {
+      position: relative;
+      left: calc(50% - 200px); }
+  .collection-album-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    /* Width of the album image. */ }
+  .player-bar .left-controls {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px; }
+  .player-bar .player-bar-control-group {
+    display: inline-block;
+    position: relative;
+    width: 100%; }
+    .player-bar .player-bar-control-group .song-name, .player-bar .player-bar-control-group .artist-name {
+      text-align: center;
+      font-size: 1em;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      font-size: 1em;
+      font-weight: 300; }
+  .player-bar .seek-control {
+    position: relative;
+    padding: 50px; }
+    .player-bar .seek-control .current-time {
+      position: relative;
+      float: left;
+      font-size: 1em; }
+    .player-bar .seek-control .total-time {
+      position: relative;
+      float: right;
+      font-size: 1em; } }
+
 html {
   height: 100%; }
 
@@ -321,15 +386,18 @@ body.landing {
   padding-bottom: 0; }
 
 .player-header-nav {
-  background-color: rgba(123, 70, 163, 0.9); }
-  .player-header-nav .navbar-nav a {
-    line-height: 45px;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1.2; }
-    .player-header-nav .navbar-nav a:hover {
-      color: rgba(123, 70, 163, 0.9); }
+  background-color: rgba(123, 70, 163, 0.9);
+  float: none; }
+  .player-header-nav .navbar-nav {
+    float: none; }
+    .player-header-nav .navbar-nav a {
+      line-height: 45px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.2; }
+      .player-header-nav .navbar-nav a:hover {
+        color: rgba(123, 70, 163, 0.9); }
 
 body.landing .navbar {
   margin-bottom: 0; }

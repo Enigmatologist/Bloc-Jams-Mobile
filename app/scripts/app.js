@@ -19,7 +19,7 @@ var albumPicasso = {
 };
 
 
-blocJams = angular.module('BlocJams', ['ui.router']);
+blocJams = angular.module('BlocJams', ['ui.router', 'ui.bootstrap']);
 
 blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
@@ -46,6 +46,12 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
             controller: 'Album.controller'},
       'player-bar': {templateUrl: '/templates/player_bar.html'}
     }
+  });
+
+  $stateProvider.state('profile', {
+    url: '/profile',
+    controller: 'Profile.controller',
+    templateUrl: '/templates/profile.html'
   });
 
 }]);
@@ -75,6 +81,12 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
           '/images/album-placeholders/album-8.jpg',
           '/images/album-placeholders/album-9.jpg',
         ];
+
+        $scope.isCollapsed = false;
+}]);
+
+blocJams.controller('Profile.controller', ['$scope', function($scope){
+  
 }]);
 
 blocJams.controller('Collection.controller', ['$scope', 'SongPlayer', function($scope, SongPlayer) {

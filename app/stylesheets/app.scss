@@ -4,6 +4,7 @@
   @import "player_bar";
   @import "buttons";
   @import "profile";
+  @import "mobile";
 
 html {
     height: 100%;
@@ -28,7 +29,9 @@ html {
  
  .player-header-nav {
    background-color: rgba(123, 70, 163, .9);
+   float: none;
     .navbar-nav {
+      float: none;
       a {
         line-height: 45px;
         color: white;
