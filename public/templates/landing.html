@@ -1,11 +1,11 @@
  <div class='hero-content'> <!-- Hero content -->
    <div class='container'>
-     <h1> Bloc Jams </h1>
-     <h3 ng_click="subTextClicked()"> {{ subText }} </h3>
+     <h1 class="animated bounceIn"> Bloc Jams </h1>
+     <h3 class="animated bounceIn" ng-click="subTextClicked()"> {{ subText }} </h3>
    </div>
  </div>
  
- <div class='selling-points container'> <!-- selling points -->
+ <div class='selling-points container animate slideUp'> <!-- selling points -->
    <div class='row'>
      <div class='point col-md-4'>
        <h5> Choose your music </h5>
@@ -25,7 +25,16 @@
  <div class="landing-album-list container">
    <div class="row">
      <div class="col-md-4 album-cover" ng-repeat="albumURL in albumURLs">
-       <img  ng-src="{{albumURL}}">
+      <div class='flipper'>
+        <figure class='front'>
+          <img  ng-src="{{albumURL}}">
+        <figcaption>
+          {{album.name}} <br />
+          {{album.artist}}
+        </figcaption>  
+        </figure>  
+      </div> 
      </div>
    </div>
  </div>
+

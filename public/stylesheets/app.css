@@ -3,11 +3,12 @@
   padding: 100px 0; }
   .hero-content h1 {
     font-size: 70px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: 300; }
 
 .selling-points {
-  padding: 100px 0; }
+  padding: 100px 0;
+  visibility: hidden; }
   .selling-points .point {
     width: 32%;
     float: left;
@@ -22,7 +23,39 @@
       font-size: 18px; }
 
 .landing-album-list {
-  padding-right: 175px; }
+  padding-right: 75px; }
+
+div.flipper {
+  perspective: 1200px;
+  width: 100%;
+  float: left; }
+
+div.flipper figure {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1s transform; }
+
+div.flipper figure img {
+  width: 100%;
+  height: auto; }
+
+div.flipper figure figcaption {
+  color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  transform: rotateY(0.5turn) translateZ(1px);
+  text-align: center;
+  padding-top: 45%;
+  transition: 1s 0.5s opacity; }
+
+div.flipper:hover figure {
+  transform: rotateY(0.5turn); }
+
+div.flipper:hover figure figcaption {
+  opacity: 1; }
 
 .album-header-container {
   margin-top: 55px;

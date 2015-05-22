@@ -21,6 +21,25 @@ var albumPicasso = {
 
 blocJams = angular.module('BlocJams', ['ui.router', 'ui.bootstrap']);
 
+// Landing Page Directive
+
+blocJams.directive('slider', function (){
+  return {
+    restrict: 'C',
+    link: function(scope, element, attrs){
+      $(element).scroll(function(){
+        $('.selling-points').each(function(){
+          var imagePos = $(this).offset().top;
+          var topOfWindow = $(window).scrollTop();
+            if(imagePos < topOfWindow + 400) {
+              $(this).addClass("slideUp");
+            }
+        });
+      });
+    }
+  };
+});
+
 blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
  
@@ -83,7 +102,9 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
         ];
 
         $scope.isCollapsed = false;
+        $scope.album = angular.copy(albumPicasso);
 }]);
+
 
 blocJams.controller('Profile.controller', ['$scope', function($scope){
   
