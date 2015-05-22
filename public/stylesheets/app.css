@@ -21,6 +21,9 @@
     .selling-points .point p {
       font-size: 18px; }
 
+.landing-album-list {
+  padding-right: 175px; }
+
 .album-header-container {
   margin-top: 55px;
   margin-bottom: 40px; }
@@ -335,7 +338,7 @@ td.song-number {
     /* Example class added to style the album covers for mobile */ }
     .landing-album-list .album-cover {
       position: relative;
-      left: calc(50% - 200px); }
+      left: calc(72% - 200px); }
   .collection-album-container {
     position: relative;
     margin-left: auto;
